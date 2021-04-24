@@ -1,0 +1,171 @@
+li {
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+    background-image: linear-gradient(to right, #9795f0 0%, #fbc8d4 100%);
+    overflow: hidden;
+}
+
+@keyframes mon {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes run {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: -1600px;
+    }
+}
+
+@keyframes move {
+    0% {
+        top: 700px;
+        left: 0;
+    }
+    100% {
+        top: 700px;
+        left: 750px;
+    }
+}
+
+@keyframes bg1 {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -3840px 0;
+    }
+}
+
+.bear {
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
+    height: 100px;
+    width: 200px;
+    animation: move 5s linear forwards;
+}
+
+.bear img {
+    position: absolute;
+    animation: run .8s steps(8) infinite;
+    z-index: 99999;
+}
+
+.mon {
+    height: 700px;
+    animation: mon .5s ease 0s 1 forwards;
+}
+
+.mon .bg1 {
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    z-index: 2;
+    height: 300px;
+    width: 3840px;
+    background: url(bg1.png) repeat-x;
+    animation: bg1 50s linear infinite;
+}
+
+.mon .bg2 {
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    z-index: 1;
+    height: 400px;
+    width: 3840px;
+    background: url(bg2.png) repeat-x;
+    animation: bg1 100s linear infinite;
+}
+
+.login {
+    position: relative;
+    top: -900px;
+    left: 0px;
+    border: 1px solid black;
+    width: 300px;
+}
+
+.login {
+    margin: 0 auto;
+    /* login框剧中 */
+    margin-top: 200px;
+    /* login框与顶部的距离 */
+    padding: 20px 50px;
+    /* login框内部的距离(内部与输入框和按钮的距离) */
+    /* background-color: #d2e58894; */
+    background-image: linear-gradient(to left, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    /* login框背景颜色和透明度 */
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    /* 圆角边 */
+    text-align: center;
+    /* 框内所有内容剧中 */
+}
+
+.login h1 {
+    color: white;
+    /* LOGIN字体颜色 */
+}
+
+.login .inputBox {
+    margin-top: 50px;
+    /* 输入框顶部与LOGIN标题的间距 */
+}
+
+.login .inputBox .input {
+    margin-top: 20px;
+    /* 输入框之间的距离 */
+}
+
+.login .inputBox .input span {
+    color: white;
+    /* icon颜色 */
+}
+
+.login .inputBox .input input {
+    border: 0;
+    /* 删除输入框边框 */
+    padding: 10px 10px;
+    /* 输入框内的间距 */
+    border-bottom: 1px solid white;
+    /* 输入框白色下划线 */
+    background-color: #00000000;
+    /* 输入框透明 */
+    color: white;
+    /* 输入字体的颜色 */
+}
+
+.login .loginButton {
+    margin-top: 30px;
+    /* 按钮顶部与输入框的距离 */
+    width: 200px;
+    height: 45px;
+    color: #333333;
+    /* 按钮字体颜色 */
+    border: 0;
+    /* 删除按钮边框 */
+    border-radius: 20px;
+    /* 按钮圆角边 */
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+    /* 按钮颜色 */
+    cursor: pointer;
+}
